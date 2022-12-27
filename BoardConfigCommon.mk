@@ -139,6 +139,10 @@ VENDOR_SECURITY_PATCH := 2020-09-01
 # Vendor separation
 TARGET_COPY_OUT_VENDOR := system/vendor
 
+# Verity
+# Only needed for signing
+BOARD_AVB_ENABLE := false
+
 # WiFi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_WLAN_DEVICE := qcwcn
