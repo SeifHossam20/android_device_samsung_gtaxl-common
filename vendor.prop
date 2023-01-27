@@ -39,6 +39,7 @@ ro.soc.manufacturer=Samsung
 ro.soc.model=Exynos 7870
 
 # SurfaceFlinger
+debug.sf.auto_latch_unsignaled=0
 debug.sf.disable_backpressure=1
 debug.sf.enable_hwc_vds=1
 debug.sf.latch_unsignaled=1
