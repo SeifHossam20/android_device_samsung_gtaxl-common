@@ -54,6 +54,12 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-service \
     libbt-vendor
 
+# This is a workaround for the Bluetooth sanitize shadow call stack (SCS)
+# crash reported here: https://issuetracker.google.com/issues/302408537,
+# which occurs due to old Mali binaries which won't see any updates.
+# For details of the root cause, please check the above issue.
+PRODUCT_PROPERTY_OVERRIDES += ro.zygote.disable_gl_preload=1
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1200
