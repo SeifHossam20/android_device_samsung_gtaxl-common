@@ -20,6 +20,9 @@ $(call inherit-product, vendor/samsung/gtaxl-common/gtaxl-common-vendor.mk)
 # Set Dalvik heap configuration
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
+# Soong namespaces
+$(call inherit-product, hardware/samsung_slsi-linaro/config/config.mk)
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
