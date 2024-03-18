@@ -43,8 +43,8 @@ system/etc/firmware/utfbd30.bin:vendor/firmware/utfbd30.bin|643a919ab575c6b48da6
 system/etc/firmware/utfbd32.bin:vendor/firmware/utfbd32.bin|643a919ab575c6b48da619d67bf1594bee73ee56
 
 # Mali graphics - r28p0 - from A720SKSU5CUJ2
--vendor/lib/egl/libGLES_mali.so|b95c1ab62f390f888bc0ad2a6f2e0ff568e5e487
--vendor/lib64/egl/libGLES_mali.so|93b2f7cf14fc47d670f97366844a3d387d93df12
+-vendor/lib/egl/libGLES_mali.so;SYMLINK=vendor/lib/hw/vulkan.universal7870.so,vendor/lib/libOpenCL.so,vendor/lib/libOpenCL.so.1,vendor/lib/libOpenCL.so.1.1|b95c1ab62f390f888bc0ad2a6f2e0ff568e5e487
+-vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/hw/vulkan.universal7870.so,vendor/lib64/libOpenCL.so,vendor/lib64/libOpenCL.so.1,vendor/lib64/libOpenCL.so.1.1|93b2f7cf14fc47d670f97366844a3d387d93df12
 
 # Sensors - from T585XXU7CUH1
 # A rare 7th hardware revision of gtaxllte/SM-T585 uses different sensors to all

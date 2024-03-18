@@ -111,15 +111,7 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
     gralloc.exynos7870 \
     hwcomposer.exynos7870 \
-    libhwc2on1adapter \
-    libGLES_mali_vulkan_symlink32 \
-    libGLES_mali_vulkan_symlink64 \
-    libGLES_mali_libOpenCL_symlink32 \
-    libGLES_mali_libOpenCL_symlink64 \
-    libGLES_mali_libOpenCL.1_symlink32 \
-    libGLES_mali_libOpenCL.1_symlink64 \
-    libGLES_mali_libOpenCL.1_symlink32 \
-    libGLES_mali_libOpenCL.1.1_symlink64
+    libhwc2on1adapter
 
 # Health
 PRODUCT_PACKAGES += \
