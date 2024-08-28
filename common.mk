@@ -17,6 +17,9 @@
 # Inherit proprietary vendor blobs
 $(call inherit-product, vendor/samsung/gtaxl-common/gtaxl-common-vendor.mk)
 
+# Set Dalvik heap configuration
+$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
