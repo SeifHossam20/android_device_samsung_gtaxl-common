@@ -32,6 +32,7 @@ LOCAL_SHARED_LIBRARIES := \
 	libcutils \
 	libaudioutils \
 	libhardware \
+	librilutils \
 	libprocessgroup \
 	libtinyalsa \
 	libtinycompress \
