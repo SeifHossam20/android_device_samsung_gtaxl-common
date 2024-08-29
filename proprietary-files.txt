@@ -1,59 +1,55 @@
-# Camera - from P585MUBU2CUF2
-# Notes:
-# - libexynoscamera3 blob from P580ZSS1CTI1 is kept as a camera preview/video stretching bug
-#   occurs in a different, more favourable, way with it that seems to affect less scenarios
-# - camera.vendor.universal7870 was taken directly from /system/lib/hw/camera.exynos7870.so
--vendor/lib/libexynoscamera.so
--vendor/lib/libexynoscamera3.so
--vendor/lib/libsensorlistener.so
+# Files are from Samsung's P585MUBU2CUF2 stock firmware unless pinned
+
+# Camera
+# libexynoscamera3 blob from P580ZSS1CTI1 is kept as a camera preview/video stretching bug
+# occurs in a different, more favourable, way with it that seems to affect less scenarios
+-system/lib/libexynoscamera.so:vendor/lib/libexynoscamera.so
+-system/lib/libexynoscamera3.so:vendor/lib/libexynoscamera3.so|c1f9a84e1ac0972e4c9f5e7b393584b6544627a3
+-system/lib/libsensorlistener.so:vendor/lib/libsensorlistener.so
+-system/lib/libuniplugin.so:vendor/lib/libuniplugin.so
+-system/lib/hw/camera.exynos7870.so:vendor/lib/hw/camera.vendor.universal7870.so
 -vendor/lib/libstainkiller.so
--vendor/lib/libuniplugin.so
--vendor/lib/hw/camera.vendor.universal7870.so
 
 # DRM - from bonito (Pixel 3a XL) SP2A.220505.008 firmware
-# Modifcations made:
-# * The libprotobuf-cpp-lite-3.9.1.so dependency in libwvhidl.so
-#   has been replaced with libprotobuf-cpp-lite.so:
-# $ patchelf --replace-needed libprotobuf-cpp-lite-3.9.1.so libprotobuf-cpp-lite.so libwvhidl.so
-# * The useless vendor.move_data_sh service has been removed from
-#   android.hardware.drm@1.4-service.widevine.rc
--vendor/bin/hw/android.hardware.drm@1.4-service.widevine
-vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
--vendor/lib64/libwvhidl.so
+-vendor/bin/hw/android.hardware.drm@1.4-service.widevine|0918336440ba0464f93fee97925b94ad12b7ef5d
+vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|225dd006bfecf6c1dca6793fa1c13a455ce4eae6
+-vendor/lib64/libwvhidl.so|e13993a1720771da59ce1a950d72295afbda0f19
 
-# Firmware - Bluetooth - from P585MUBU2CUF2
-vendor/firmware/nvm_tlv_tf_1.1.bin
-vendor/firmware/rampatch_tlv_tf_1.1.tlv
+# Firmware - Bluetooth
+system/etc/firmware/nvm_tlv_tf_1.1.bin:vendor/firmware/nvm_tlv_tf_1.1.bin
+system/etc/firmware/rampatch_tlv_tf_1.1.tlv:vendor/firmware/rampatch_tlv_tf_1.1.tlv
 
-# Firmware - Camera - from P585MUBU2CUF2
+# Firmware - Camera
 vendor/firmware/fimc_is_lib.bin
 vendor/firmware/setfile_4h5yc.bin
 vendor/firmware/setfile_sr259.bin
 
 # Firmware - MFC (Multi Format Codec) - from A305GUBU8CWE3
 # Version information: "MFC v10.11, F/W: 20yy, 08mm, 31dd"
-vendor/firmware/mfc_fw.bin
+vendor/firmware/mfc_fw.bin|bf0923f572b421b17bee9b7671b0876c05bdadc7
 
 # Firmware - WiFi - partly from T395XXSDCVA1, partly as in T585XXS7CUI5
 # bdwlan30.bin and utfbd30.bin are as in the T585XXS7CUI5 firmware, and are also copies of bdwlan32.bin
 # and utfbd32.bin as in the T395XXSDCVA1 firmware respectively. With bdwlan30.bin and utfbd30.bin from
-# the T395XXSDCVA1 firmware, WiFi regulatory domain selection doesn't work properly.
-vendor/firmware/Data.msc
-vendor/firmware/bdwlan30.bin
-vendor/firmware/bdwlan32.bin
-vendor/firmware/otp30.bin
-vendor/firmware/qwlan30.bin
-vendor/firmware/qwlan30_ibss.bin
-vendor/firmware/utf30.bin
-vendor/firmware/utfbd30.bin
-vendor/firmware/utfbd32.bin
+# the T395XXSDCVA1 firmware, (at least) WiFi regulatory domain selection doesn't work properly.
+system/etc/firmware/bdwlan30.bin:vendor/firmware/bdwlan30.bin|643a919ab575c6b48da619d67bf1594bee73ee56
+system/etc/firmware/bdwlan32.bin:vendor/firmware/bdwlan32.bin|643a919ab575c6b48da619d67bf1594bee73ee56
+system/etc/firmware/Data.msc:vendor/firmware/Data.msc|9da4caf325c5fba938fb21cb80e7c73d390a4dd6
+system/etc/firmware/otp30.bin:vendor/firmware/otp30.bin|61b90ab084fbd938ac285bf480722134434f1d73
+system/etc/firmware/qwlan30.bin:vendor/firmware/qwlan30.bin|aaede9ae4187495e68af1ae865ce69a6ae412b9e
+system/etc/firmware/qwlan30_ibss.bin:vendor/firmware/qwlan30_ibss.bin|832734ed8ae903a1ff52ae80d9841aaaafcdf8d8
+system/etc/firmware/utf30.bin:vendor/firmware/utf30.bin|b4b55ffe3e53d7c2357e48e7fe079f705db30049
+system/etc/firmware/utfbd30.bin:vendor/firmware/utfbd30.bin|643a919ab575c6b48da619d67bf1594bee73ee56
+system/etc/firmware/utfbd32.bin:vendor/firmware/utfbd32.bin|643a919ab575c6b48da619d67bf1594bee73ee56
 
 # Mali graphics - r28p0 - from A720SKSU5CUJ2
--vendor/lib/egl/libGLES_mali.so
--vendor/lib64/egl/libGLES_mali.so
+-vendor/lib/egl/libGLES_mali.so|b95c1ab62f390f888bc0ad2a6f2e0ff568e5e487
+-vendor/lib64/egl/libGLES_mali.so|93b2f7cf14fc47d670f97366844a3d387d93df12
 
 # Sensors - from T585XXU7CUH1
--vendor/lib/hw/sensors.universal7870.so
+# A rare 7th hardware revision of gtaxllte/SM-T585 uses different sensors to all
+# other tablets. Only the sensor HAL from T585XXU7CUH1 has support for them.
+-vendor/lib/hw/sensors.universal7870.so|7932df291a78aacde1df3a2049d543933b7f2df1
 
 # wcnss_filter - for Bluetooth - not from any stock firmware, built from source
--vendor/bin/wcnss_filter
+-vendor/bin/wcnss_filter|0dcc084ea192c66f7b4270007cc5e74120ddcce1
