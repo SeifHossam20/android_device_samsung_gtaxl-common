@@ -55,11 +55,11 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        system/lib/libexynoscamera.so)
+            "${PATCHELF}" --add-needed "libexynoscamera_shim.so" "${2}"
+            ;;
         vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc)
             sed -i "3,10d" "${2}"
-            ;;
-        vendor/lib/libexynoscamera.so)
-            "${PATCHELF}" --add-needed "libexynoscamera_shim.so" "${2}"
             ;;
         vendor/lib64/libwvhidl.so)
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-3.9.1.so" "libprotobuf-cpp-lite.so" "${2}"

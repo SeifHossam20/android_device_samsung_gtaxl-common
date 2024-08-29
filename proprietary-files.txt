@@ -3,11 +3,11 @@
 # Camera
 # libexynoscamera3 blob from P580ZSS1CTI1 is kept as a camera preview/video stretching bug
 # occurs in a different, more favourable, way with it that seems to affect less scenarios
--system/lib/libexynoscamera.so:vendor/lib/libexynoscamera.so
--system/lib/libexynoscamera3.so:vendor/lib/libexynoscamera3.so|c1f9a84e1ac0972e4c9f5e7b393584b6544627a3
--system/lib/libsensorlistener.so:vendor/lib/libsensorlistener.so
--system/lib/libuniplugin.so:vendor/lib/libuniplugin.so
--system/lib/hw/camera.exynos7870.so:vendor/lib/hw/camera.vendor.universal7870.so
+-system/lib/libexynoscamera.so
+-system/lib/libexynoscamera3.so|c1f9a84e1ac0972e4c9f5e7b393584b6544627a3
+-system/lib/libsensorlistener.so
+-system/lib/libuniplugin.so
+-system/lib/hw/camera.exynos7870.so:system/lib/hw/camera.vendor.universal7870.so
 -vendor/lib/libstainkiller.so
 
 # DRM - from bonito (Pixel 3a XL) SP2A.220505.008 firmware
