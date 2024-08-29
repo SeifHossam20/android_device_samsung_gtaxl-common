@@ -133,10 +133,6 @@ TARGET_AUDIOHAL_VARIANT := gtaxl
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
 SELINUX_IGNORE_NEVERALLOWS := true
 
-# Shims
-TARGET_LD_SHIM_LIBS += \
-    /vendor/lib/libexynoscamera.so|libexynoscamera_shim.so
-
 # Vendor security patch level - P580ZSS1CTI1
 VENDOR_SECURITY_PATCH := 2020-09-01
 
