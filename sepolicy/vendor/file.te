@@ -13,6 +13,7 @@ type factorymode_factoryapp_efs_file, file_type;
 type baro_delta_factoryapp_efs_file, file_type;
 
 # sysfs types
+type sysfs_block_writable, sysfs_type, fs_type, mlstrustedobject;
 type sysfs_camera, sysfs_type, fs_type, mlstrustedobject;
 type sysfs_camera_writable, sysfs_type, fs_type, mlstrustedobject;
 type sysfs_gps, sysfs_type, fs_type, mlstrustedobject;
@@ -39,3 +40,6 @@ type log_vendor_data_file, file_type, data_file_type;
 type log_cbd_vendor_data_file, file_type, data_file_type;
 type radio_vendor_data_file, file_type, data_file_type;
 type mediadrm_vendor_data_file, file_type, data_file_type;
+
+# Vendor files
+type vendor_firmware_file, vendor_file_type, file_type;
