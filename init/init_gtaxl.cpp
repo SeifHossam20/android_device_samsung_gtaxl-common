@@ -105,6 +105,12 @@ void vendor_load_properties()
         set_ro_product_prop("model", "SM-P588C");
         set_ro_product_prop("device", "gtanotexlltechn");
         set_ro_product_prop("name", "gtanotexlltezc");
+    } else if (bootloader.find("P587") == 0) {
+        /* SM-P587 */
+        property_override("ro.build.description", "gtanotexlltejv-user 8.1.0 M1AJQ P587JXS1CTL1 release-keys", false);
+        set_ro_product_prop("model", "SM-P587");
+        set_ro_product_prop("device", "gtanotexllte");
+        set_ro_product_prop("name", "gtanotexlltejv");
     } else if (bootloader.find("P585") == 0) {
         /* SM-P585 */
         property_override("ro.build.description", "gtanotexlltejx-user 8.1.0 M1AJQ P585JXS3CTL1 release-keys", false);
@@ -136,7 +142,7 @@ void vendor_load_properties()
         set_ro_product_prop("device", "gtaxlltechn");
         set_ro_product_prop("name", "gtaxlltezc");
     } else if (bootloader.find("T587") == 0) {
-        /* SM-T585 */
+        /* SM-T587 */
         property_override("ro.build.description", "gtaxlltejv-user 8.1.0 M1AJQ T587JVS6CTC1 release-keys", false);
         set_ro_product_prop("model", "SM-T587");
         set_ro_product_prop("device", "gtaxllte");
