@@ -16,6 +16,8 @@
 
 COMMON_PATH := device/samsung/gtaxl-common
 
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
+
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
