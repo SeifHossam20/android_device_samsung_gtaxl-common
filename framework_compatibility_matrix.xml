@@ -44,7 +44,6 @@
     </interface>
   </hal>
 
-  <!-- AIDL HAL: note the version comes from the parentheses -->
   <hal format="aidl" optional="true">
     <name>android.hardware.cas</name>
     <version>1</version>
@@ -63,10 +62,9 @@
     </interface>
   </hal>
 
-  <!-- AIDL HAL -->
   <hal format="aidl" optional="true">
     <name>android.hardware.drm</name>
-    <version>1</version>
+    <version>1.0</version>
     <interface>
       <name>IDrmFactory</name>
       <instance>clearkey</instance>
@@ -75,7 +73,7 @@
 
   <hal format="aidl" optional="true">
     <name>android.hardware.drm</name>
-    <version>1</version>
+    <version>1.0</version>
     <interface>
       <name>IDrmFactory</name>
       <instance>widevine</instance>
@@ -145,7 +143,6 @@
     </interface>
   </hal>
 
-  <!-- AIDL HAL for lights -->
   <hal format="aidl" optional="true">
     <name>android.hardware.light</name>
     <version>1</version>
@@ -236,7 +233,6 @@
     </interface>
   </hal>
 
-  <!-- AIDL HALs for Wi‑Fi -->
   <hal format="aidl" optional="true">
     <name>android.hardware.wifi</name>
     <version>2</version>
@@ -261,72 +257,6 @@
     <interface>
       <name>ISupplicant</name>
       <instance>default</instance>
-    </interface>
-  </hal>
-
-  <!-- AIDL and HIDL HALs for vendor.lineage.health -->
-  <hal format="aidl" optional="true">
-    <name>vendor.lineage.health</name>
-    <version>1</version>
-    <interface>
-      <name>IChargingControl</name>
-      <instance>default</instance>
-    </interface>
-  </hal>
-
-  <hal format="hidl" optional="true">
-    <name>vendor.lineage.health</name>
-    <version>1.0</version>
-    <interface>
-      <name>IChargingControl</name>
-      <instance>default</instance>
-    </interface>
-  </hal>
-
-  <!-- Vendor HAL for touch key disabler -->
-  <hal format="hidl" optional="true">
-    <name>vendor.lineage.touch</name>
-    <version>1.0</version>
-    <interface>
-      <name>IKeyDisabler</name>
-      <instance>default</instance>
-    </interface>
-  </hal>
-
-  <!-- Vendor Samsung HALs -->
-  <hal format="hidl" optional="true">
-    <name>vendor.samsung.hardware.radio.bridge</name>
-    <version>2.0</version>
-    <interface>
-      <name>ISehBridge</name>
-      <instance>slot1</instance>
-    </interface>
-  </hal>
-
-  <hal format="hidl" optional="true">
-    <name>vendor.samsung.hardware.radio.channel</name>
-    <version>2.0</version>
-    <interface>
-      <name>ISehChannel</name>
-      <instance>epdgd</instance>
-    </interface>
-  </hal>
-
-  <hal format="hidl" optional="true">
-    <name>vendor.samsung.hardware.radio.channel</name>
-    <version>2.0</version>
-    <interface>
-      <name>ISehChannel</name>
-      <instance>imsd</instance>
-    </interface>
-  </hal>
-
-  <hal format="hidl" optional="true">
-    <name>vendor.samsung.hardware.radio</name>
-    <version>2.1</version>
-    <interface>
-      <name>ISehRadio</name>
-      <instance>slot1</instance>
     </interface>
   </hal>
 </compatibility-matrix>
