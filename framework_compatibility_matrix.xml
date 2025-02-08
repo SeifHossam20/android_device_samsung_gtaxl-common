@@ -64,7 +64,7 @@
 
   <hal format="aidl" optional="true">
     <name>android.hardware.drm</name>
-    <version>1.0</version>
+    <version>1</version>
     <interface>
       <name>IDrmFactory</name>
       <instance>clearkey</instance>
@@ -73,7 +73,7 @@
 
   <hal format="aidl" optional="true">
     <name>android.hardware.drm</name>
-    <version>1.0</version>
+    <version>1</version>
     <interface>
       <name>IDrmFactory</name>
       <instance>widevine</instance>
