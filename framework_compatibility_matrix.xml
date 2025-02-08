@@ -259,4 +259,49 @@
       <instance>default</instance>
     </interface>
   </hal>
+
+  <hal format="hidl" optional="true">
+    <name>vendor.lineage.health</name>
+    <version>1.0</version>
+    <interface>
+      <name>IChargingControl</name>
+      <instance>default</instance>
+    </interface>
+  </hal>
+
+  <hal format="hidl" optional="true">
+    <name>vendor.samsung.hardware.radio.bridge</name>
+    <version>2.0</version>
+    <interface>
+      <name>ISehBridge</name>
+      <instance>slot1</instance>
+    </interface>
+  </hal>
+
+  <hal format="hidl" optional="true">
+    <name>vendor.samsung.hardware.radio.channel</name>
+    <version>2.0</version>
+    <interface>
+      <name>ISehChannel</name>
+      <instance>epdgd</instance>
+    </interface>
+  </hal>
+
+  <hal format="hidl" optional="true">
+    <name>vendor.samsung.hardware.radio.channel</name>
+    <version>2.0</version>
+    <interface>
+      <name>ISehChannel</name>
+      <instance>imsd</instance>
+    </interface>
+  </hal>
+
+  <hal format="hidl" optional="true">
+    <name>vendor.samsung.hardware.radio</name>
+    <version>2.1</version>
+    <interface>
+      <name>ISehRadio</name>
+      <instance>slot1</instance>
+    </interface>
+  </hal>
 </compatibility-matrix>
