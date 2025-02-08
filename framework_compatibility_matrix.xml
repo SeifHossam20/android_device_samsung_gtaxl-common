@@ -126,15 +126,6 @@
   </hal>
 
   <hal format="hidl" optional="true">
-    <name>android.hardware.health</name>
-    <version>2.1</version>
-    <interface>
-      <name>IHealth</name>
-      <instance>default</instance>
-    </interface>
-  </hal>
-
-  <hal format="hidl" optional="true">
     <name>android.hardware.keymaster</name>
     <version>4.1</version>
     <interface>
